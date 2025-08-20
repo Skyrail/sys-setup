@@ -42,3 +42,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+
+export ZSH_THEME_AWS_PROFILE_PREFIX="%{$fg[blue]%}"
+export ZSH_THEME_AWS_PROFILE_SUFFIX=
+export ZSH_THEME_AWS_REGION_PREFIX=
+export ZSH_THEME_AWS_REGION_SUFFIX="%{$reset_color%}"
+export ZSH_THEME_AWS_DIVIDER=\|
