@@ -24,9 +24,12 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Colours
-Plugin 'chriskempson/tomorrow-theme'
-Plugin 'fxn/vim-monochrome'
-Plugin 'arcticicestudio/nord-vim'
+" Plugin 'chriskempson/tomorrow-theme'
+" Plugin 'fxn/vim-monochrome'
+" Plugin 'arcticicestudio/nord-vim'
+" Plugin 'morhetz/gruvbox'
+" Plugin 'tomasr/molokai'
+Plugin 'sainnhe/everforest'
 
 " HTML5 support
 Plugin 'othree/html5.vim'
@@ -56,6 +59,17 @@ set t_Co=256
 " Syntax highlighting
 syntax on
 
+if has('termguicolors')
+    set termguicolors
+endif
+
+set background=dark
+
+let g:everforest_background = 'hard'
+let g:everforest_better_performance = 1
+
+colorscheme everforest
+
 " Auto-identify file type
 filetype plugin indent on    " required
 
@@ -84,10 +98,8 @@ set backspace=indent,eol,start  " backspace over all kinds of things
 " Show matching bracket 
 set showmatch
 
-colorscheme nord 
-
 " Status bar
-let g:airline_theme='nord'
+let g:airline_theme='molokai'
 let g:airline_detect_paste=1
 let g:airline#extensions#tabline#enabled=1
 
